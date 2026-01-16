@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Chaos Dashboard</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+    <nav class='navbar'>
+        <span class='logo'>PROJECT: CHAOS</span>
+        <div class='chaos-gauge-container'>
+            <div id='chaos-meter' class='chaos-bar'>ENTROPY LEVEL: 99.9%</div>
+        </div>
+    </nav>
+
+    <main class='dashboard'>
+        <section class='controls'>
+            <h2>Report Incident</h2>
+            <form id='incident-form'>
+                <input type='text' id='incident-desc' placeholder='Describe the anomaly...' required>
+                <select id='severity'>
+                    <option value='low'>Low - Minor Glitch</option>
+                    <option value='critical'>Critical - Timeline Collapse</option>
+                </select>
+                <button type='submit'>LOG ANOMALY</button>
+            </form>
+        </section>
+
+        <section class='incident-feed'>
+            <h2>Incident Stream</h2>
+            <ul id='incident-list'>
+                <li class='incident-item'>System initialized... No anomalies detected (yet).</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src='script.js'></script>
+</body>
+</html>
