@@ -1,0 +1,69 @@
+:root {
+    --bg-color: #050505;
+    --text-color: #00ff41;
+    --accent-color: #ff003c;
+    --surface-color: #1a1a1a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.landing {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.cta-btn:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--surface-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* BUG: This bar is causing horizontal scroll because of the width and lack of box-sizing */
+.chaos-bar {
+    background: var(--accent-color);
+    color: white;
+    padding: 10px;
+    width: 600px;
+    white-space: nowrap;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.incident-item {
+    border-left: 3px solid var(--text-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    list-style: none;
+    background: var(--surface-color);
+}
